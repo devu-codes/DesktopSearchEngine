@@ -1,0 +1,31 @@
+
+Root folder -> (OS module)FileScanner -> ( Files/folders (metadata) ) Parser --> (Kw) Fast Search
+
+
+Search we need- 
+
+Words in docs --> type owner; file-name parts 
+eg. /users/devu/abc.txt
+
+Prefix search - Tries
+Final Ranking - superfast search 
+
+
+Design-2 
+Data is on disk.. B+ Tree can be option 
+How to store data.. and search it fast 
+
+Inverted-index size 
+ls -R / | tr "\t" "\n" | wc -l 
+
+ls -R / listing root , tr \t \n replacing \t with \n , wc -l wordcount 
+ 
+keywords per file - 20 avg 
+
+Disk Based Inverted index
+
+1. Relational DB table + indexing(B+Tree)
+- Disk Access aware
+- range queries 
+- log(n) disk read/ write 
+index on KW
